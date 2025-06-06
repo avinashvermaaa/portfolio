@@ -181,7 +181,7 @@ function App() {
               <div className="limg relative w-1/2 h-full">
                 <img
                   className="absolute scale-[0.635] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  src="./imag.png"
+                  src="./gunnngirls.png"
                   alt=""
                 /> {/* Character 2nd Image */}
               </div>
@@ -341,7 +341,7 @@ function App() {
 
             {/* Project 9 */}
               <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-semibold mb-2">Project 9</h3>
                   <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
