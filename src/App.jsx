@@ -159,7 +159,7 @@ function App() {
                 className="absolute character -bottom-[120%] right-1/11 -translate-x-1/2 scale-[1] rotate-[-20deg]"
                 src="./boybg.png"
                 alt=""
-              />
+              /> {/* Character bg Image */}
             </div>
             <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
               <div className="flex gap-4 items-center">
@@ -183,7 +183,7 @@ function App() {
                   className="absolute scale-[0.635] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                   src="./imag.png"
                   alt=""
-                />
+                /> {/* Character 2nd Image */}
               </div>
               <div className="rg w-[30%] py-3">
                 <h1 className="text-6xl">Still Running,</h1>
@@ -378,7 +378,7 @@ function App() {
               </a>
             </div>
             <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-              © {new Date().getFullYear()} Avinash Verma. All rights reserved.
+              © {new Date().getFullYear()} Avinash Verma | All rights reserved.
             </p>
           </footer>
         </div>
