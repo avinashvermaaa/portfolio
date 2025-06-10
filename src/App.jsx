@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   let [showContent, setShowContent] = useState(false);
+  const [showMenu, setShowMenu] = useState(false); // <-- new state for menu toggle
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -123,22 +125,76 @@ function App() {
           />
         </svg>
       </div>
-      {showContent && (
+      
+  {showContent && (
+
         <div className="main w-full rotate-[-10deg] scale-[1.7]">
           <div className="landing overflow-hidden relative w-full h-screen bg-black">
-            <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
-              <div className="logo flex gap-7">
-                <div className="lines flex flex-col gap-[5px]">
-                  <div className="line w-15 h-2 bg-white"></div>
-                  <div className="line w-8 h-2 bg-white"></div>
-                  <div className="line w-5 h-2 bg-white"></div>
+            {/* Navbar with Logo and Navigation Lines */}
+            <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10 flex items-center justify-between">
+              {/* Logo Section */}
+              <div className="logo flex gap-7 items-center">
+                {/* Dashed Lines for Navigation */}
+                <div className="relative">
+                  {/* Dashed Line Div that toggles menu */}
+                  <div
+                    className="w-15 h-2 bg-white border border-2 cursor-pointer"
+                    title="Navigate"
+                    onClick={() => setShowMenu(!showMenu)}
+                  ></div>
+                  <div
+                  className="w-12 h-2 bg-white border border-2 cursor-pointer"
+                  title="Navigate"
+                  onClick={() => setShowMenu(!showMenu)}
+                ></div>
+                  <div
+                  className="w-8 h-2 bg-white border border-2 cursor-pointer "
+                  title="Navigate"
+                  onClick={() => setShowMenu(!showMenu)}
+                ></div>
+
+    {/* Dropdown menu items, shown when showMenu is true */}
+                  {showMenu && (
+                    <div className="absolute top-0 mt-10 bg-white rounded shadow-lg z-[20]">
+                      <div
+                        className="px-4 py-2 cursor-pointer hover:bg-gray-200 font-normal"
+                        onClick={() => {
+                          setShowMenu(false);
+                          const section = document.getElementById('about');
+                          if (section) section.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        About
+                      </div>
+                      <div
+                        className="px-4 py-2 cursor-pointer hover:bg-gray-200 font-normal"
+                        onClick={() => {
+                          setShowMenu(false);
+                          const section = document.getElementById('projects');
+                          if (section) section.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        Projects
+                      </div>
+                      <div
+                        className="px-4 py-2 cursor-pointer hover:bg-gray-200 font-normal"
+                        onClick={() => {
+                          setShowMenu(false);
+                          const section = document.getElementById('footer');
+                          if (section) section.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        Connect
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <h3 className="text-4xl -mt-[8px] leading-none text-white">
-                  Rockstar
-                </h3>
+
+        {/* Logo Text */}
+                <h3 className="text-4xl -mt-[8px] leading-none text-white">Avinash Verma</h3>
               </div>
             </div>
-
+            
             <div className="imagesdiv relative overflow-hidden w-full h-screen">
               <img
                 className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover"
@@ -185,23 +241,43 @@ function App() {
                   alt=""
                 /> {/* Character 2nd Image */}
               </div>
-              <div className="rg w-[30%] py-3">
-                <h1 className="text-6xl">Still Running,</h1>
-                <h1 className="text-6xl">Not Hunting</h1>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Distinctio possimus, asperiores nam, omnis inventore nesciunt
-                  a architecto eveniet saepe, ducimus necessitatibus at
-                  voluptate.
+              <div id="about" className="rg w-[45%] py-3">
+                <h1 className="text-2xl">Avinash Verma's Portfolio</h1>
+                <h1 className="text-2xl">Building the Future of Web Development</h1>
+                <p className="mt-5 text-lg font-[Helvetica_Now_Display]">
+                  Hi, I'm Avinash Verma, a passionate Full Stack Developer and a GCP expert with a knack 
+                  for creating dynamic and responsive web applications. My journey in tech has been fueled 
+                  by a love for problem-solving and a desire to build impactful solutions that solve real 
+                  world problems and enhance user experiences.
                 </p>
-                <p className="mt-3 text-xl font-[Helvetica_Now_Display]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  eius illum fugit eligendi nesciunt quia similique velit
-                  excepturi soluta tenetur illo repellat consectetur laborum
-                  eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
-                  autem sapiente.
+
+                <p className="mt-3 text-lg font-[Helvetica_Now_Display]">
+                  I have a strong technical background with experience in React.js, Node.js, Express, and MongoDB. 
+                  I thrive in environments that challenge me to continuously learn and adapt, and I’m always exploring 
+                  new ways to improve efficiency and create seamless user experiences. 
                 </p>
-                <button className="bg-yellow-500 px-5 py-5 text-black mt-9 text-4xl">
+
+                <p className="mt-3 text-base font-[Helvetica_Now_Display]">
+                  My drive doesn’t stop at just code—I’m deeply committed to fostering team collaboration and mentorship, 
+                  ensuring that my colleagues feel supported in their professional growth. I prioritize clean, maintainable 
+                  code and strive for excellence in everything I do.
+                </p>
+                <p className="mt-3 text-base font-[Helvetica_Now_Display]">
+                  Currently, I’m focused on growing my skill set, learning more about Generative AI, 
+                  Cloud Technologies, MCP and AI Automation.
+                </p>
+     
+                <button
+                  type="button"
+                  className="bg-yellow-400 hover:bg-yellow-500 cursor-pointer px-4 py-4 text-black mt-7 text-3xl"
+                  onClick={() => {
+                    const footer = document.getElementById('footer');
+                    if (footer) {
+                      footer.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  title="Contact Now"
+                >
                   Contact Now
                 </button>
               </div>
@@ -209,174 +285,224 @@ function App() {
           </div>
 
 {/* Projects Section */}
-          <div className="w-full min-h-screen bg-[#111] text-white flex flex-col items-center justify-center px-10 py-20">
+          <div id="projects" className="w-full min-h-screen bg-[#111] text-white flex flex-col items-center justify-center px-10 py-20">
             <h2 className="text-6xl font-bold mb-10">My Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full max-w-7xl">
 
-  {/* Projects list */}
-            {/* CodeSphere */}
-            <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-              {/* Splash Effect Layer */}
-              <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-              {/* Content */}
-              <div className="relative z-10">
-                <h3 className="text-2xl font-semibold mb-2">CodeSphere</h3>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                  <strong>CodeSphere</strong> :- An Online AI Coding platform where you can Write, Run, Compile and Debug your Codes. <br />
-                  <br />
-                  <strong>Currently Supporting Languages:</strong> C, C++, Python, JavaScript. <br />
-                  <strong>Other Available:</strong> Java, HTML, CSS, PHP, Ruby, Database languages (SQL, MongoDB), and more.
-                </p>
-              </div>
-            </div>
+{/* Projects list */}
 
-            {/* Fileshare */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">Fileshare</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>FileShare</strong> :- Effortlessly Send & Receive Files - Secure, Fast🚀 and Hassle-Free! 
-                    <br />
-                    Say goodbye 👋 to complicated transfers and enjoy seamless file sharing 📂 anytime, anywhere 🌍🌻!
-                  </p>
+              {/* CodeSphere */}
+              <a href="https://codespr.netlify.app/" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">CodeSphere</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>CodeSphere</strong> :- An Online AI Coding platform where you can Write, Run, Compile and Debug your Codes. <br />
+                      <br />
+                      <strong>Currently Supporting Languages:- </strong> C, C++, Python, JavaScript. <br /> <br />
+                      <strong>Other Available:</strong> Java, HTML, CSS, Typescript, Rust, PHP, Ruby, 
+                      Database languages (SQL, MySQL, SQLite, MongoDB), and many more.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
 
-            {/* Acetype */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">AceType</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>AceType</strong> :-
-                    This innovative project blends cutting-edge technology with design to create an immersive experience.
-                    By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space.
-                    <br />
-                    Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure
-                    intuitive interactions with every feature. Expect the unexpected with Project 7.
-                  </p>
-                </div>
-              </div>
+              {/* Fileshare */}
+              <a href="https://fileshare247.netlify.app/" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">Fileshare</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>FileShare</strong> :- Effortlessly Send & Receive Files - Secure, Fast🚀 and Hassle-Free! 
+                      Say goodbye 👋 to complicated transfers and enjoy seamless file sharing 📂 anytime, anywhere 🌍🌻! <br />
+                      
+                      No need for complicated cloud storage setups—just upload your files, share the link, and you're done! Our platform is designed to make file sharing as easy as possible, so you can focus on what really matters, not the tech. 🚀💻
 
-            {/* Virtual Mouse */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">Virtual Mouse</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>Virtual Mouse</strong> :-
-                    This innovative project blends cutting-edge technology with design to create an immersive experience.
-                    By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space.
-                    <br />
-                    Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure
-                    intuitive interactions with every feature. Expect the unexpected with Project 7.
-                  </p>
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
 
-            {/* Sorting Visualizer */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">Sorting Visualizer</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>Sorting Visualizer</strong> :-
-                    This innovative project blends cutting-edge technology with design to create an immersive experience.
-                    By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space.
-                    <br />
-                    Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure
-                    intuitive interactions with every feature. Expect the unexpected with Project 7.
-                  </p>
+              {/* Acetype */}
+              <a href="https://acetype.netlify.app/" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">AceType</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>AceType</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
+                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
 
-            {/* Indieflix */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">Indieflix</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>Indieflix</strong> :-
-                    This innovative project blends cutting-edge technology with design to create an immersive experience.
-                    By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space.
-                    <br />
-                    Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure
-                    intuitive interactions with every feature. Expect the unexpected with Project 7.
-                  </p>
+              {/* Virtual Mouse */}
+              <a href="https://github.com/avinashvermaaa/Virtual-Mouse" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">Virtual Mouse</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>Virtual Mouse</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
+                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
 
-            {/* Project 7 */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">Project 7</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>AceType</strong> :-
-                    This innovative project blends cutting-edge technology with design to create an immersive experience.
-                    By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space.
-                    <br />
-                    Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure
-                    intuitive interactions with every feature. Expect the unexpected with Project 7.
-                  </p>
+              {/* Sorting Visualizer */}
+              <a href="https://avinashvermaaa.github.io/Sorting_Visualizer/" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">Sorting Visualizer</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>Sorting Visualizer</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
+                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
 
-            {/* Project 8 */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">Project 8</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>AceType</strong> :-
-                    This innovative project blends cutting-edge technology with design to create an immersive experience.
-                    By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space.
-                    <br />
-                    Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure
-                    intuitive interactions with every feature. Expect the unexpected with Project 7.
-                  </p>
+              {/* Indieflix */}
+              <a href="https://avinashvermaaa.github.io/Indieflix/" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">Indieflix</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>Indieflix</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
+                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
 
-            {/* Project 9 */}
-              <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-semibold mb-2">Project 9</h3>
-                  <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                    <strong>AceType</strong> :-
-                    This innovative project blends cutting-edge technology with design to create an immersive experience.
-                    By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space.
-                    <br />
-                    Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure
-                    intuitive interactions with every feature. Expect the unexpected with Project 7.
-                  </p>
+              {/* LittleLemon */}
+              <a href="https://github.com/avinashvermaaa/littlelemon" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">LittleLemon</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>LittleLemon</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
+                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
+
+              {/* Project 8 */}
+              <a href="https://todoapp-av.netlify.app/" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">Todo List</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>Todo List</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
+                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              {/* Project 9 */}
+              <a href="https://project9.netlify.app/" target="_blank" rel="noopener noreferrer">
+                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-semibold mb-2">Project 9</h3>
+                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                      <strong>AceType</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
+                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
+                    </p>
+                    {/* Launch Icon */}
+                    <div className="mt-4 flex justify-end">
+                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
 
 {/* Add more project cards as needed */}
+
 
             </div>
           </div>
 
 {/* Footer Section */}
-          <footer className="w-full bg-black text-white py-10 px-10 flex flex-col items-center justify-center">
+          <footer id="footer" className="w-full bg-black text-white py-10 px-10 flex flex-col items-center justify-center">
             <h4 className="text-2xl mb-4">Connect with me</h4>
             <div className="flex gap-6 text-3xl">
-              <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+              
+              {/* Github */}
+              <a href="https://github.com/avinashvermaaa" target="_blank" rel="noreferrer">
                 <i className="ri-github-fill hover:text-yellow-400 transition"></i>
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
-                <i className="ri-linkedin-box-fill hover:text-blue-400 transition"></i>
+              
+              {/* Linkedin */}
+              <a href="https://www.linkedin.com/in/avinash-verma-20946b21b/" target="_blank" rel="noreferrer">
+                <i className="ri-linkedin-fill hover:text-blue-400 transition"></i>
               </a>
-              <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+              
+              {/* Instagram */}
+              <a href="https://www.instagram.com/avinash_vermaa/" target="_blank" rel="noopener noreferrer">
                 <i className="ri-instagram-fill hover:text-red-400 transition"></i>
               </a>
-              <a href="mailto:youremail@example.com">
+
+              {/* Mail */}
+              <a href="mailto:code6969nation@gmail.com">
                 <i className="ri-mail-fill hover:text-green-400 transition"></i>
               </a>
+              
+              {/* CodeChef */}
+              <a href="https://www.codechef.com/users/avinashvermaaa" target="_blank" rel="noopener noreferrer">
+                <i className="ri-code-box-fill hover:text-yellow-500 transition text-2xl"></i>
+              </a>
+
+              {/* LeetCode */}
+              <a href="https://leetcode.com/u/avinash_vermaa/" target="_blank" rel="noopener noreferrer">
+                <i className="ri-code-box-fill hover:text-blue-500 transition text-2xl"></i>
+              </a>
+              
             </div>
+
             <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
               © {new Date().getFullYear()} Avinash Verma | All rights reserved.
             </p>
