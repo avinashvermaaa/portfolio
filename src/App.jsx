@@ -291,173 +291,211 @@ function App() {
 
 {/* Projects list */}
 
-              {/* CodeSphere */}
-              <a href="https://codespr.netlify.app/" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">CodeSphere</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>CodeSphere</strong> :- An Online AI Coding platform where you can Write, Run, Compile and Debug your Codes. <br />
-                      <br />
-                      <strong>Currently Supporting Languages:- </strong> C, C++, Python, JavaScript. <br /> <br />
-                      <strong>Other Available:</strong> Java, HTML, CSS, Typescript, Rust, PHP, Ruby, 
-                      Database languages (SQL, MySQL, SQLite, MongoDB), and many more.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+      {/* CodeSphere */}
+      <a href="https://codespr.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">CodeSphere</h3>
+            <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+              <strong>CodeSphere</strong> :- An Online AI Coding platform where you can Write, Run, 
+              Compile and Debug your Codes. <br />
+              <br />
+              <strong>Currently Supporting Languages:- </strong> C, C++, Python, JavaScript. <br /> <br />
+              <strong>Other Available:</strong> Java, HTML, CSS, Typescript, Rust, PHP, Ruby, 
+              Database languages (SQL, MySQL, SQLite, MongoDB), and many more.
+            </p>
 
-              {/* Fileshare */}
-              <a href="https://fileshare247.netlify.app/" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">Fileshare</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>FileShare</strong> :- Effortlessly Send & Receive Files - Secure, Fast🚀 and Hassle-Free! 
-                      Say goodbye 👋 to complicated transfers and enjoy seamless file sharing 📂 anytime, anywhere 🌍🌻! <br />
-                      
-                      No need for complicated cloud storage setups—just upload your files, share the link, and you're done! Our platform is designed to make file sharing as easy as possible, so you can focus on what really matters, not the tech. 🚀💻
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
 
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+      {/* Fileshare */}
+      <a href="https://fileshare247.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">Fileshare</h3>
+            <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+              <strong>FileShare</strong> :- Effortlessly Send & Receive Files - Secure, Fast🚀 and Hassle-Free! 
+              Say goodbye 👋 to complicated transfers and enjoy seamless file sharing 📂 anytime, anywhere 🌍🌻!
+              <br />
+              No need for complicated cloud storage setups—just upload your files, share the link, 
+              and you're done! Our platform is designed to make file sharing as easy as possible, 
+              so you can focus on what really matters, not the tech. 🚀💻
+            </p>
 
-              {/* Acetype */}
-              <a href="https://acetype.netlify.app/" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">AceType</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>AceType</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
-                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
 
-              {/* Virtual Mouse */}
-              <a href="https://github.com/avinashvermaaa/Virtual-Mouse" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">Virtual Mouse</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>Virtual Mouse</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
-                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+      {/* Acetype */}
+      <a href="https://acetype.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">AceType</h3>
+            <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+              <strong>AceType</strong> :- AceType is an online typing platform designed to improve typing 
+              speed and accuracy. It offers three difficulty levels—Easy, Medium, and Hard—with dynamic 
+              typing exercises generated by Google's Gemini API. 
+              <br />
+              Users can track their real-time speed (WPM) and accuracy, helping them gradually improve. 
+              The simple, UI makes it suitable for typists of all skill levels, from beginners to experts.
+            </p>
+            
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
 
-              {/* Sorting Visualizer */}
-              <a href="https://avinashvermaaa.github.io/Sorting_Visualizer/" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">Sorting Visualizer</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>Sorting Visualizer</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
-                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+      {/* Virtual Mouse */}
+      <a href="https://github.com/avinashvermaaa/Virtual-Mouse" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">Virtual Mouse</h3>
+            <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+              <strong>Virtual Mouse</strong> :- This innovative project uses hand gestures to control 
+              computer functions in real time. Powered by Python, OpenCV, and NLP, it allows users to 
+              navigate and interact with their computer through intuitive gesture-based commands, making 
+              the digital experience more interactive and accessible.
+              <br />
+              Virtual Mouse  offers a futuristic and hands-free alternative to traditional input methods.
+            </p>
 
-              {/* Indieflix */}
-              <a href="https://avinashvermaaa.github.io/Indieflix/" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">Indieflix</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>Indieflix</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
-                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
 
-              {/* LittleLemon */}
-              <a href="https://github.com/avinashvermaaa/littlelemon" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">LittleLemon</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>LittleLemon</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
-                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+      {/* Sorting Visualizer */}
+      <a href="https://avinashvermaaa.github.io/Sorting_Visualizer/" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">Sorting Visualizer</h3>
+              <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                <strong>Sorting Visualizer</strong> :- This project is Engineered for both educational and 
+                professional purposes. leverages advanced visualization techniques to illustrate 
+                the step-by-step process of various sorting algorithms ("Bubble Sort, 
+                Insertion Sort, Selection Sort, Quick Sort, Heap Sort, and Shell Sort").By visualizing each 
+                algorithm's execution, it provides a deeper understanding of performance,  
+                and computational complexity. 
+              </p>
 
-              {/* Project 8 */}
-              <a href="https://todoapp-av.netlify.app/" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">Todo List</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>Todo List</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
-                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
 
-              {/* Project 9 */}
-              <a href="https://project9.netlify.app/" target="_blank" rel="noopener noreferrer">
-                <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2">Project 9</h3>
-                    <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                      <strong>AceType</strong> :- This innovative project blends cutting-edge technology with design to create an immersive experience. By incorporating advanced algorithms, it pushes the boundaries of what’s possible in the digital space. <br />
-                      Our team of talented designers and engineers have crafted a seamless, user-centric interface to ensure intuitive interactions with every feature. Expect the unexpected with Project 7.
-                    </p>
-                    {/* Launch Icon */}
-                    <div className="mt-4 flex justify-end">
-                      <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </a>
+      {/* Indieflix */}
+      <a href="https://avinashvermaaa.github.io/Indieflix/" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">Indieflix</h3>
+              <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                <strong>Indieflix</strong> :- Indieflix is an advanced movie streaming platform designed 
+                to provide an immersive entertainment experience. Offering a wide range of movies, anime, 
+                and web series, the platform ensures high-quality streaming with a seamless, user-friendly 
+                interface. It Delivers a smooth and engaging viewing experience across devices, 
+                support dynamic content delivery, ensuring users enjoy uninterrupted access to a diverse library of media content.
+              </p>
+
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      {/* LittleLemon */}
+      <a href="https://github.com/avinashvermaaa/littlelemon" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">LittleLemon</h3>
+              <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                <strong>LittleLemon</strong> :- LittleLemon is a restaurant booking web app that lets users book
+                 tables in advance and place orders for dine-in or takeout. With a secure database and intuitive 
+                 interface, it efficiently manages bookings, orders, and customer data.
+                 It also features an interactive map to help users find nearby restaurant locations, 
+                 offering a modern and reliable solution for both customers and restaurant owners.
+                 Built with (Frontend:- Html, Css, Js) (Backend :- Django) and  (Database:- Sqlite3).
+              </p>
+
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      {/* Project 8 */}
+      <a href="https://todoapp-av.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">Todo List</h3>
+              <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                <strong>Todo List</strong> :- This efficient Todo List app, built with ReactJS, is 
+                designed to help users organize and prioritize tasks seamlessly. Supports  
+                features such as filtering tasks by status (completed, pending), sorting by due date, 
+                and setting priorities (low, medium, high). Users can also categorize tasks into (general, 
+                work, personal, and urgent groups). It also has a dark mode toggle, allowing users to 
+                customize the interface for a comfortable viewing experience. 
+              </p>
+
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      {/* Project 9 */}
+      <a href="https://avinashvermaaa.github.io/qrcode_generator/" target="_blank" rel="noopener noreferrer">
+        <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold mb-2">QRCode Generator</h3>
+            <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+              <strong>QRCode Generator</strong> :- The QRCode Generator project is a web application 
+              that allows users to input a website URL along with a custom image name, and the application 
+              generates a QR code based on the provided link. Once the QR code is generated, users can 
+              download the image directly to their device. 
+              The app leverages JavaScript to dynamically create the QR code and provide a seamless user 
+              experience with a clean and simple interface.
+            </p>
+            
+            {/* Launch Icon */}
+            <div className="mt-4 flex justify-end">
+              <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
 
 
 {/* Add more project cards as needed */}
