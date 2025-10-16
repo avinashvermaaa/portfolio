@@ -237,13 +237,13 @@ function App() {
               <div className="limg relative w-1/2 h-full">
                 <img
                   className="absolute scale-[0.635] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  src="./gunnngirls.png"
+                  src="./imag.png"
                   alt=""
                 /> {/* Character 2nd Image */}
               </div>
               <div id="about" className="rg w-[45%] py-3">
-                <h1 className="text-2xl">Avinash Verma's Portfolio</h1>
-                <h1 className="text-2xl">Building the Future of Web Development</h1>
+                <h1 className="font-[Nunito] text-5xl">Avinash Verma's Portfolio</h1>
+                <h1 className="font-[Helvetica_Now_Display] text-2xl">Building the Future of Web Development</h1>
                 <p className="mt-5 text-lg font-[Helvetica_Now_Display]">
                   Hi, I'm Avinash Verma, a passionate Full Stack Developer and a GCP expert with a knack 
                   for creating dynamic and responsive web applications. My journey in tech has been fueled 
@@ -269,7 +269,7 @@ function App() {
      
                 <button
                   type="button"
-                  className="bg-yellow-400 hover:bg-yellow-500 cursor-pointer px-4 py-4 text-black mt-7 text-3xl"
+                  className="bg-yellow-400 hover:bg-yellow-400 cursor-pointer px-3 py-3 text-black mt-7 text-2xl"
                   onClick={() => {
                     const footer = document.getElementById('footer');
                     if (footer) {
@@ -296,7 +296,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">CodeSphere</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">CodeSphere</h3>
             <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
               <strong>CodeSphere</strong> :- An Online AI Coding platform where you can Write, Run, 
               Compile and Debug your Codes. <br />
@@ -319,7 +319,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">Fileshare</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">Fileshare</h3>
             <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
               <strong>FileShare</strong> :- Effortlessly Send & Receive Files - Secure, Fast🚀 and Hassle-Free! 
               Say goodbye 👋 to complicated transfers and enjoy seamless file sharing 📂 anytime, anywhere 🌍🌻!
@@ -342,7 +342,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">AceType</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">AceType</h3>
             <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
               <strong>AceType</strong> :- AceType is an online typing platform designed to improve typing 
               speed and accuracy. It offers three difficulty levels—Easy, Medium, and Hard—with dynamic 
@@ -365,7 +365,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">Virtual Mouse</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">Virtual Mouse</h3>
             <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
               <strong>Virtual Mouse</strong> :- This innovative project uses hand gestures to control 
               computer functions in real time. Powered by Python, OpenCV, and NLP, it allows users to 
@@ -388,7 +388,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">Sorting Visualizer</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">Sorting Visualizer</h3>
               <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
                 <strong>Sorting Visualizer</strong> :- This project is Engineered for both educational and 
                 professional purposes. leverages advanced visualization techniques to illustrate 
@@ -411,7 +411,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">Indieflix</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">Indieflix</h3>
               <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
                 <strong>Indieflix</strong> :- Indieflix is an advanced movie streaming platform designed 
                 to provide an immersive entertainment experience. Offering a wide range of movies, anime, 
@@ -433,7 +433,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-green-500 scale-0 origin-bottom-left transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">LittleLemon</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">LittleLemon</h3>
               <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
                 <strong>LittleLemon</strong> :- LittleLemon is a restaurant booking web app that lets users book
                  tables in advance and place orders for dine-in or takeout. With a secure database and intuitive 
@@ -456,7 +456,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-yellow-500 scale-0 origin-bottom transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">Todo List</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">Todo List</h3>
               <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
                 <strong>Todo List</strong> :- This efficient Todo List app, built with ReactJS, is 
                 designed to help users organize and prioritize tasks seamlessly. Supports  
@@ -479,7 +479,7 @@ function App() {
         <div className="relative group p-6 rounded-xl overflow-hidden bg-[#1e1e1e] hover:scale-105 transition-transform duration-300">
           <div className="absolute inset-0 bg-blue-500 scale-0 origin-bottom-right transition-transform duration-500 ease-out group-hover:scale-150 z-0"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold mb-2">QRCode Generator</h3>
+            <h3 className="text-2xl font-[Helvetica_Now_Display] mb-2">QRCode Generator</h3>
             <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
               <strong>QRCode Generator</strong> :- The QRCode Generator project is a web application 
               that allows users to input a website URL along with a custom image name, and the application 
@@ -530,14 +530,14 @@ function App() {
               </a>
               
               {/* CodeChef */}
-              <a href="https://www.codechef.com/users/avinashvermaaa" target="_blank" rel="noopener noreferrer">
+              {/* <a href="https://www.codechef.com/users/avinashvermaaa" target="_blank" rel="noopener noreferrer">
                 <i className="ri-code-box-fill hover:text-yellow-500 transition text-2xl"></i>
-              </a>
+              </a> */}
 
               {/* LeetCode */}
-              <a href="https://leetcode.com/u/avinash_vermaa/" target="_blank" rel="noopener noreferrer">
+              {/* <a href="https://leetcode.com/u/avinash_vermaa/" target="_blank" rel="noopener noreferrer">
                 <i className="ri-code-box-fill hover:text-blue-500 transition text-2xl"></i>
-              </a>
+              </a> */}
               
             </div>
 
