@@ -86,8 +86,8 @@ const projects = [
 function Projects() {
 
   return (
-    <div id="projects" className="w-full min-h-screen bg-[yellow] text-white px-10 py-20">
-      {/* <div id="projects" className="w-full min-h-screen px-10 py-20 text-white bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" > */}
+    <div id="projects" className="w-full min-h-screen bg-[black] text-white px-10 py-20">
+      {/* // <div id="projects" className="w-full min-h-screen px-10 py-20 text-white bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" > */}
       <h2 className="text-6xl text-center mb-16 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">My Projects</h2>
 
       <div className="grid md:grid-cols-3 gap-10">
