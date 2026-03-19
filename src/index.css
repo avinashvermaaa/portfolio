@@ -1,4 +1,6 @@
+@config "../tailwind.config.js";
 @import "tailwindcss";
+
 
 @font-face {
   font-family: "pricedown";

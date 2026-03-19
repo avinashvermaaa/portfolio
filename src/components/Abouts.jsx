@@ -15,8 +15,17 @@ function About() {
         {/* Right Text */}
         <div id="about" className="rg w-full md:w-[45%] py-6 md:py-3">
 
-          <h1 className="font-[Nunito] text-3xl sm:text-4xl md:text-5xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+          {/* <h1 className="font-[Nunito] text-3xl sm:text-4xl md:text-5xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
             Building Fast, Scalable, and Modern Web Apps
+          </h1> */}
+
+          <h1 className="font-[Nunito] text-3xl sm:text-4xl md:text-5xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-grad-red bg-clip-text text-transparent inline-block">
+              Building Fast, Scalable, and
+            </span>{" "}
+            <span className="bg-grad-blue bg-clip-text text-transparent inline-block">
+              Modern Web Apps
+            </span>
           </h1>
 
           <h1 className="font-[Inter] text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">

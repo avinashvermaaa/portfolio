@@ -6,9 +6,14 @@ const TechStack = () => {
     <section id="techstack" className="techstack-section">
       {/* Banner */}
       <div className="mt-8 mb-8">
-        <h2 className="text-6xl text-center bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-          My Tech Stacks
-        </h2>
+        <div className="my-8 text-center text-6xl font-bold">
+          <span className="bg-grad-red bg-clip-text text-transparent inline-block">
+            My Tech
+          </span>{" "}
+          <span className="bg-grad-blue bg-clip-text text-transparent inline-block">
+            Stacks
+          </span>
+        </div>
       </div>
 
       {/* Dynamically rendering each tech stack */}

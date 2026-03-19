@@ -147,7 +147,7 @@ function Hero() {
                 alt=""
               />
               <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/4 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-                <h1 className="text-[9rem] leading-none -ml-10 text-2xl mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Avinash</h1>
+                <h1 className="text-[9rem] leading-none -ml-10 text-2xl mb-6 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Avinash</h1>
                 <h1 className="text-[9rem] leading-none ml-10">Kumar</h1>
                 <h1 className="text-[9rem] leading-none -ml-10 text-2xl mb-10 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Verma</h1>
               </div>
