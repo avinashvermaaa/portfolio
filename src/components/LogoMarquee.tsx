@@ -1,6 +1,13 @@
 import "../styles/LogoMarquee.css";
 
-const LogoMarquee = ({ items, imagePath, direction, className = "logo" }) => {
+interface LogoMarqueeProps {
+  items: string[];
+  imagePath: string;
+  direction: string;
+  className?: string;
+}
+
+const LogoMarquee = ({ items, imagePath, direction, className = "logo" }: LogoMarqueeProps) => {
   const doubledItems = [...items, ...items];
 
   return (

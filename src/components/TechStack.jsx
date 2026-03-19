@@ -15,9 +15,16 @@ const TechStack = () => {
       {TECH_STACKS.map((stack) => (
         <div
           key={stack.id}
-          id={`moving-animation-${stack.id}`}
+          id={`moving-container-${stack.id}`}
           className="marquee-container"
         >
+          {/* ── Section label ── */}
+          <div className="marquee-label-row">
+            <span className="marquee-label-line" />
+            <span className="marquee-label">{stack.title}</span>
+            <span className="marquee-label-line" />
+          </div>
+
           <LogoMarquee
             items={stack.items}
             imagePath={stack.imagePath}
