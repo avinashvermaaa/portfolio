@@ -1,23 +1,15 @@
-.banner {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 /* Container */
-#moving-animation,
-#moving-animation-db-devops {
+#moving-animation {
   overflow: hidden;
   position: relative;
   background: black;
 }
 
-/* Wrapper */
-.marque-wrapper,
-.marque-wrapper-db-devops {
+/* Wrapper (For seamless loop) */
+.marque-wrapper {
   display: flex;
   width: 100%;
   overflow: hidden;
-
   box-shadow:
     inset 4px 4px 12px rgb(15, 15, 15),
     inset -4px -4px 12px rgb(15, 14, 14);
@@ -34,11 +26,11 @@
 }
 
 /* Pause on Hover */
-/* .marque:hover,
+.marque:hover,
 .marque-left:hover,
 .marque-right:hover {
-    animation-play-state: paused;
-} */
+  animation-play-state: paused;
+}
 
 /* Logos */
 .logo {
@@ -52,16 +44,10 @@
 
 .logo:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.11);
 }
 
-/* .logo-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
+/* Tooltip */
 .logo-tooltip {
   bottom: -28px;
   color: white;
@@ -111,19 +97,30 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  /*for tablets */
   .logo {
     height: 8vw;
+    min-height: 45px;
   }
 
   .marque-left,
   .marque-right {
-    gap: 1rem;
+    gap: 2rem;
     padding: 1.5rem 0;
   }
 }
 
 @media (max-width: 480px) {
+
+  /* for phones */
   .logo {
-    height: 10vw;
+    height: 11vw;
+    min-height: 40px;
+  }
+
+  .marque-left,
+  .marque-right {
+    gap: 1.5rem;
   }
 }
