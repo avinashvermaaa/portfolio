@@ -8,6 +8,7 @@ export default {
       backgroundImage: {
         'grad-red': 'linear-gradient(90deg, red, white)',
         'grad-blue': 'linear-gradient(90deg, #7aa2ff, #2d5bff)',
+        'grad-red-blue': 'linear-gradient(90deg, red, white, #7aa2ff, #2d5bff)',
       },
     },
   },
