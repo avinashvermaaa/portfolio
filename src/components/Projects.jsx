@@ -1,5 +1,6 @@
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import { projectsList } from '../configs/projectConfig';
+import { ExternalLink } from "lucide-react";
+
 const ProjectCard = ({ title, description, link, hover }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
@@ -17,7 +18,9 @@ const ProjectCard = ({ title, description, link, hover }) => {
           </p>
 
           <div className="mt-4 flex justify-end">
-            <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i>
+            <ExternalLink className="w-8 h-8 text-red-500" />
+            {/* <i  className="ri-arrow-right-up-box-line text-3xl text-red-500"></i> */}
+            {/* <i className="fas fa-external-link-alt text-2xl text-red-500 hover:text-red-400 cursor-pointer transition-colors duration-300"></i> */}
           </div>
         </div>
 

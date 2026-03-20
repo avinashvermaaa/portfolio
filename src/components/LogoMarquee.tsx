@@ -1,4 +1,5 @@
 import "../styles/LogoMarquee.css";
+import * as React from "react";
 
 interface LogoMarqueeProps {
   items: string[];

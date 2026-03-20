@@ -1,9 +1,17 @@
-import "remixicon/fonts/remixicon.css";
+import { Github, Linkedin, Mail, Instagram } from "lucide-react";
+
+const iconMap = {
+  github: Github,
+  linkedin: Linkedin,
+  mail: Mail,
+  instagram: Instagram,
+};
 
 const SocialCard = ({ link, social, hover }) => {
+  const Icon = iconMap[social];
   return (
     <a href={link} target="_blank" rel="noreferrer">
-      <i className={`ri-${social}-fill ${hover} transition`}></i>
+      <Icon className={`w-8 h-8 ${hover} hover:text-yellow-400`} />
     </a>
   );
 };

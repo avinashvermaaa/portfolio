@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Hero() {
 
