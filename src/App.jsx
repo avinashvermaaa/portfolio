@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { LazySection } from "./LazySection";
+import { ScrollProgress } from "@/components/ui/scroll-progress"
 
 const Hero = lazy(() => import("./components/Heros"));
 const About = lazy(() => import("./components/Abouts"));
@@ -10,6 +11,7 @@ const Footer = lazy(() => import("./components/Footer"));
 function App() {
   return (
     <>
+      <ScrollProgress />
       <LazySection component={Hero} />
       <LazySection component={About} />
       <LazySection component={TechStack} />
