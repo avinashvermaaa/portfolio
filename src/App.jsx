@@ -1,8 +1,7 @@
 import { lazy } from "react";
-import { LazySection } from "./LazySection";
+import LazySection from "./LazySection";
 import { ScrollProgress } from "@/components/ui/scroll-progress"
 import { Pointer } from "@/components/ui/pointer"
-
 const Hero = lazy(() => import("./components/Heros"));
 const About = lazy(() => import("./components/Abouts"));
 const TechStack = lazy(() => import("./components/TechStack"));
@@ -15,11 +14,25 @@ function App() {
       <ScrollProgress />
       <Pointer className="fill-blue-500" />
 
-      <LazySection component={Hero} />
-      <LazySection component={About} />
-      <LazySection component={TechStack} />
-      <LazySection component={Projects} />
-      <LazySection component={Footer} />
+      <LazySection height="100vh">
+        <Hero />
+      </LazySection>
+
+      <LazySection height="100vh">
+        <About />
+      </LazySection>
+
+      <LazySection height="100vh">
+        <TechStack />
+      </LazySection>
+
+      <LazySection height="100vh">
+        <Projects />
+      </LazySection>
+
+      <LazySection>
+        <Footer />
+      </LazySection>
     </>
   );
 }

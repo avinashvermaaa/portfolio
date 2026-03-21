@@ -1,23 +1,25 @@
-import { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import { useInView } from "react-intersection-observer";
 
-export function LazySection({ component: Component }) {
-    const [loaded, setLoaded] = useState(false);
-    const { ref, inView } = useInView({
-        triggerOnce: true, // load only once
-        threshold: 0.1,    // trigger when 10% of the section is visible
-    });
-
-    // when in view, mark as loaded
-    if (inView && !loaded) setLoaded(true);
-
-    return (
-        <div ref={ref}>
-            {loaded && (
-                <Suspense fallback={<div className="text-white">Loading...</div>}>
-                    <Component />
-                </Suspense>
-            )}
-        </div>
-    );
+function Loader() {
+  return (
+    <div className="flex items-center justify-center h-full">
+      <div className="w-10 h-10 border-4 border-gray-600 border-t-white rounded-full animate-spin"></div>
+    </div>
+  );
 }
+
+function LazySection({ children, height = "200px" }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: "150px",
+  });
+
+  return (
+    <div ref={ref} style={{ minHeight: height }}>
+      {inView && <Suspense fallback={<Loader />}>{children}</Suspense>}
+    </div>
+  );
+}
+
+export default LazySection;
