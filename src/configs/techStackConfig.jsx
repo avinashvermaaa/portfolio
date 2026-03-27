@@ -14,7 +14,7 @@ export const TECH_STACKS = [
     id: "languages-databases",
     title: "Languages & Databases",
     items: [
-      "mongodb", "mysql", "postgresql", "sql", "sqlserver",
+      "mongodb", "mysql", "postgresql", "sql", "sqlserver", "firebase", "sqlite3",
       "javascript", "typescript", "c", "cpp", "csharp", "java", "python", "go",
     ],
     imagePath: "language_and_database",
